@@ -6,7 +6,6 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
-import AsyncStorage from '@react-native-community/async-storage';
 import { withNavigation } from 'react-navigation';
 
 import styles from './styles';
@@ -26,12 +25,10 @@ class Header extends Component {
     hasBack: false,
   };
 
-  signOut = async () => {
+  back = async () => {
     const { navigation } = this.props;
 
-    await AsyncStorage.clear();
-
-    navigation.navigate('Welcome');
+    navigation.navigate('Repositories');
   };
 
   render() {
@@ -40,8 +37,8 @@ class Header extends Component {
       <View style={styles.container}>
         <StatusBar barStyle="dark-content" />
         {hasBack ? (
-          <TouchableOpacity onPress={this.signOut}>
-            <Icon name="exchange" size={16} style={styles.icon} />
+          <TouchableOpacity onPress={this.back}>
+            <Icon name="angle-left" size={32} style={styles.icon} />
           </TouchableOpacity>
         ) : (
           <View style={styles.left} />

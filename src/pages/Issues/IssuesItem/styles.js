@@ -9,38 +9,28 @@ const styles = StyleSheet.create({
     marginHorizontal: metrics.baseMargin * 2,
     marginTop: metrics.baseMargin,
     flexDirection: 'row',
+    flexWrap: 'wrap',
   },
 
-  infoContainer: {
-    marginTop: metrics.baseMargin,
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+  avatar: {
+    width: 50,
+    height: 50,
+    borderRadius: metrics.baseRadius * 10,
+    marginRight: metrics.baseMargin,
   },
 
   textContainer: {
-    marginRight: metrics.baseMargin,
+    flexDirection: 'column',
   },
 
-  infoIcon: {
-    color: colors.light,
-  },
-
-  name: {
+  title: {
     fontSize: 14,
     fontWeight: 'bold',
+    color: colors.darker,
   },
 
-  owner: {
-    color: colors.dark,
-    fontSize: 12,
-  },
-
-  image: {
-    width: 50,
-    height: 50,
-    marginRight: metrics.baseMargin,
+  user: {
+    fontSize: 14,
   },
 });
 
