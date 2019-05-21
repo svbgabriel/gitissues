@@ -136,13 +136,13 @@ export default class Issues extends Component {
         <Header title={repositoryName} hasBack />
         <View style={styles.actionButtons}>
           <TouchableOpacity onPress={this.getAllIssues}>
-            <Text style={{ fontWeight: activatedAll ? 'bold' : 'normal' }}>Todas</Text>
+            <Text style={[styles.deactivated, activatedAll && styles.activated]}>Todas</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={this.getOpenedIssues}>
-            <Text style={{ fontWeight: activatedOpened ? 'bold' : 'normal' }}>Abertas</Text>
+            <Text style={[styles.deactivated, activatedOpened && styles.activated]}>Abertas</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={this.getClosedIssues}>
-            <Text style={{ fontWeight: activatedClosed ? 'bold' : 'normal' }}>Fechadas</Text>
+            <Text style={[styles.deactivated, activatedClosed && styles.activated]}>Fechadas</Text>
           </TouchableOpacity>
         </View>
         {loading ? <ActivityIndicator style={styles.loading} /> : this.renderList()}

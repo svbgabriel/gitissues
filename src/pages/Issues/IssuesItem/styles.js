@@ -8,19 +8,22 @@ const styles = StyleSheet.create({
     padding: metrics.basePadding,
     marginHorizontal: metrics.baseMargin * 2,
     marginTop: metrics.baseMargin,
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
+    alignItems: 'center',
   },
 
   avatar: {
     width: 50,
     height: 50,
-    borderRadius: metrics.baseRadius * 10,
-    marginRight: metrics.baseMargin,
+    borderRadius: metrics.baseRadius * 5,
   },
 
   textContainer: {
-    flexDirection: 'column',
+    flex: 1,
+    justifyContent: 'center',
+    marginLeft: metrics.baseMargin,
   },
 
   title: {

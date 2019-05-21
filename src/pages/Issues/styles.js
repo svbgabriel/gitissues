@@ -20,6 +20,14 @@ const styles = StyleSheet.create({
     padding: metrics.basePadding / 2,
     justifyContent: 'space-around',
   },
+
+  activated: {
+    fontWeight: 'bold',
+  },
+
+  deactivated: {
+    fontWeight: 'normal',
+  },
 });
 
 export default styles;
